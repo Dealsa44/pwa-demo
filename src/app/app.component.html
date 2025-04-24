@@ -1,14 +1,26 @@
 <nav class="navbar">
-  <div class="navbar-brand">{{title}}</div>
+  <div class="navbar-brand">
+    <span class="logo">📱</span>
+    <h1>{{ title }}</h1>
+  </div>
+  
   <div class="navbar-actions">
-    <button *ngIf="showInstallButton" (click)="installPwa()">
-      📲 Install App
+    <nav class="nav-links">
+      <a routerLink="/pwa-info" routerLinkActive="active">About PWAs</a>
+      <a routerLink="/android" routerLinkActive="active">Android</a>
+      <a routerLink="/ios" routerLinkActive="active">iOS</a>
+      <a routerLink="/windows" routerLinkActive="active">Windows</a>
+    </nav>
+    
+    <button *ngIf="showInstallButton" (click)="installPwa()" class="install-btn">
+      <span class="icon">📲</span>
+      <span class="text">Install App</span>
     </button>
   </div>
 </nav>
 
 <main class="content">
-  <h1>Welcome to our PWA Demo</h1>
-  <p>This is a simple Progressive Web App that you can install on your device.</p>
-  <p *ngIf="isRunningStandalone()">You're currently viewing the installed version!</p>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
 </main>

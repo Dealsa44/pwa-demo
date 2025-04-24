@@ -1,0 +1,167 @@
+.platform-guide.windows {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  border: 1px solid #e0e0e0;
+
+  .guide-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #f0f0f0;
+
+    .platform-icon {
+      font-size: 2.8rem;
+      background: linear-gradient(135deg, #0078d7, #50b6ff);
+      color: white;
+      width: 64px;
+      height: 64px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 120, 215, 0.3);
+    }
+
+    h2 {
+      margin: 0;
+      color: #323130;
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+    }
+  }
+
+  .steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+
+    .step {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: translateX(5px);
+      }
+
+      .step-number {
+        background: linear-gradient(135deg, #0078d7, #50b6ff);
+        color: white;
+        width: 2.2rem;
+        height: 2.2rem;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-weight: bold;
+        font-size: 1.1rem;
+        box-shadow: 0 2px 8px rgba(0, 120, 215, 0.3);
+      }
+
+      .step-content {
+        h3 {
+          margin: 0 0 0.5rem;
+          color: #323130;
+          font-size: 1.2rem;
+          font-weight: 500;
+        }
+
+        p {
+          margin: 0;
+          color: #605e5c;
+          line-height: 1.6;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  .screenshot-placeholder {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    border: 1px dashed #e0e0e0;
+
+    .windows-mockup {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      max-width: 500px;
+      margin: 0 auto;
+      border: 1px solid #e0e0e0;
+
+      .browser-bar {
+        background: #f3f3f3;
+        padding: 0.5rem 1rem;
+        border-bottom: 1px solid #e0e0e0;
+        display: flex;
+
+        .url-bar {
+          flex-grow: 1;
+          background: white;
+          border-radius: 4px;
+          padding: 0.5rem 1rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border: 1px solid #e0e0e0;
+
+          .install-badge {
+            background: #0078d7;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 500;
+          }
+        }
+      }
+
+      .windows-content {
+        padding: 2rem;
+        text-align: center;
+
+        p {
+          color: #323130;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+    margin: 1rem;
+
+    .guide-header {
+      gap: 1rem;
+      margin-bottom: 2rem;
+
+      .platform-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .windows-mockup {
+      max-width: 100%;
+    }
+  }
+}

@@ -1,0 +1,170 @@
+.platform-guide.ios {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  border: 1px solid #e0e0e0;
+
+  .guide-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #f0f0f0;
+
+    .platform-icon {
+      font-size: 2.8rem;
+      background: linear-gradient(135deg, #007aff, #34aadc); /* iOS blue gradient */
+      color: white;
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+    }
+
+    h2 {
+      margin: 0;
+      color: #1c1c1e;
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+    }
+  }
+
+  .steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+
+    .step {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: translateX(5px);
+      }
+
+      .step-number {
+        background: linear-gradient(135deg, #007aff, #34aadc);
+        color: white;
+        width: 2.2rem;
+        height: 2.2rem;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-weight: bold;
+        font-size: 1.1rem;
+        box-shadow: 0 2px 8px rgba(0, 122, 255, 0.3);
+      }
+
+      .step-content {
+        h3 {
+          margin: 0 0 0.5rem;
+          color: #1c1c1e;
+          font-size: 1.2rem;
+          font-weight: 500;
+        }
+
+        p {
+          margin: 0;
+          color: #636366;
+          line-height: 1.6;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  .screenshot-placeholder {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px dashed #e0e0e0;
+
+    .ios-mockup {
+      background: white;
+      border-radius: 28px;
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      max-width: 280px;
+      margin: 0 auto;
+      border: 6px solid #1c1c1e;
+
+      .ios-screen {
+        background: #f2f2f7;
+        padding: 1.5rem;
+
+        .ios-share-menu {
+          background: white;
+          border-radius: 14px;
+          overflow: hidden;
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+
+          .share-option {
+            padding: 1rem;
+            color: #1c1c1e;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            &.highlight {
+              color: #007aff;
+              font-weight: 500;
+              background: #f7f9ff;
+            }
+
+            &::before {
+              content: "";
+              width: 24px;
+              height: 24px;
+              background: #f0f0f0;
+              border-radius: 6px;
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+    margin: 1rem;
+
+    .guide-header {
+      gap: 1rem;
+      margin-bottom: 2rem;
+
+      .platform-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 2rem;
+        border-radius: 12px;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .ios-mockup {
+      max-width: 240px;
+      border-radius: 24px;
+      border-width: 4px;
+    }
+  }
+}
